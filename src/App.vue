@@ -1,26 +1,47 @@
 <template>
-  <div id="app">
+  <div class="container">
+    <div class="row center">
+      <h2>Vue Markdown Viewer</h2>
+    </div>
+    <div class="row">
+      <div class="col s12 m6 l6 xl6">
+        <div class="center">
+          <h4>Markdown</h4>
+          <textarea v-model="markdown" class="info"></textarea>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l6 xl6">
+        <div>
+          <h4 class="center">Preview</h4>
+          <div class="info" v-markdown>{{markdown}}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  data(){
+    return{
+      markdown: '### Hello world\n',
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+textarea {
+  resize: none;
+  border: 2px dashed orange;
+  outline: none;
+}
+
+.info {
+  height: 400px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 </style>
