@@ -35,6 +35,6 @@ Naturally, this feels like the right thing to build.
 Next steps:
 
 1. Complete more regex filters
-2. Make text area more sponsive
+2. Make text area more responsive
 3. Integrate file output abililty
 4. Integrate with Github?
