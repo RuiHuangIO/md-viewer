@@ -14,7 +14,7 @@
       <div class="col s12 m6 l6 xl6">
         <div>
           <h4 class="center">Preview</h4>
-          <div class="info" v-markdown>{{markdown}}</div>
+          <div :key="markdown" class="info" v-markdown>{{markdown}}</div>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@ export default {
   name: 'app',
   data(){
     return{
-      markdown: '### Hello world\n',
+      markdown: '',
     };
   },
 };
